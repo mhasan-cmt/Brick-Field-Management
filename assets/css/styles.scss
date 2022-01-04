@@ -2,9 +2,44 @@
 @import 'partials/_reset';
 @import 'partials/colors';
 @import 'partials/fonts';
+@import 'partials/variables';
 
 
 
 body{
     font-family: 'Mukti', Arial, sans-serif !important;
 }
+.navbar.navbar-expand-lg.navbar-dark.bg-my{
+    background-color: $bgColor;
+}
+#offcanvasExample.sidebar-nav{
+    width: $offCanvasWidth;
+    background-color: $bgColor;
+}
+.navbar-brand img{
+    height: 80%;
+    width: 80%;
+}
+
+@media (min-width:992px) {
+    body{
+        overflow: auto !important;
+    }
+    .offcanvas-backdrop::before{
+        display: none;
+    }
+    #offcanvasExample.sidebar-nav{
+        transform: none;
+        visibility: visible !important;
+        top: $topNavbarHeight;
+        height: calc(100% - 90px);
+    }
+    #offcanvas-trigger{
+        display: none;
+    }
+    .navbar-brand img{
+        height: 100%;
+        width: 100%;
+    }
+}
+

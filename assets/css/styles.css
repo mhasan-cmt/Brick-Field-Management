@@ -53,4 +53,41 @@ table {
 body {
   font-family: 'Mukti', Arial, sans-serif !important;
 }
+
+.navbar.navbar-expand-lg.navbar-dark.bg-my {
+  background-color: #DB7859;
+}
+
+#offcanvasExample.sidebar-nav {
+  width: 270px;
+  background-color: #DB7859;
+}
+
+.navbar-brand img {
+  height: 80%;
+  width: 80%;
+}
+
+@media (min-width: 992px) {
+  body {
+    overflow: auto !important;
+  }
+  .offcanvas-backdrop::before {
+    display: none;
+  }
+  #offcanvasExample.sidebar-nav {
+    -webkit-transform: none;
+            transform: none;
+    visibility: visible !important;
+    top: 90px;
+    height: calc(100% - 90px);
+  }
+  #offcanvas-trigger {
+    display: none;
+  }
+  .navbar-brand img {
+    height: 100%;
+    width: 100%;
+  }
+}
 /*# sourceMappingURL=styles.css.map */
