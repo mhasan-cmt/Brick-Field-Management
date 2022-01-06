@@ -69,8 +69,8 @@
     <!-- OffCanvas  -->
     
     <div class="offcanvas offcanvas-start sidebar-nav" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
-      <div class="offcanvas-body p-0">
-        <nav class="navbar side-bar-nav">
+      <div class="offcanvas-body p-0 scrollbar style-7">
+        <nav class="navbar side-bar-nav force-overflow">
           <ul class="navbar-nav">
             <li>
               <a class="text-dark nav-link px-3 active" href="#">
@@ -81,11 +81,10 @@
               </a>
             </li>
             <li>
-              <a class="text-dark nav-link px-3" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
-                <span class="me-2">
-                  <i class="fab fa-forumbee"></i>
-                </span>
-                <span>কাঁচামাল ক্রয়</span>
+              <a class="text-dark nav-link px-3 d-flex justify-content-between" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+                <span>
+                  <i class="fab fa-forumbee me-2"></i>
+                  কাঁচামাল ক্রয়</span>
                 <span class="ms-5">
                   <i class="fas fa-plus"></i>
                 </span>
@@ -94,6 +93,108 @@
                 <div class="card card-body" style="transform: none;">
                   Some placeholder content for the collapse component. This panel is hidden by default but revealed when the user activates the relevant trigger.
                 </div>
+            </li>
+            <li>
+              <a class="text-dark nav-link px-3 d-flex justify-content-between" data-bs-toggle="collapse" href="#collapse-2" role="button">
+                <span>
+                  <i class="fas fa-users me-2"></i>                  
+                  শ্রমিক</span>
+                <span>
+                  <i class="fas fa-plus"></i>
+                </span>
+              </a>
+              <div class="collapse" id="collapse-2">
+                <div class="card card-body" style="transform: none;">
+                  Some placeholder content for the collapse component. This panel is hidden by default but revealed when the user activates the relevant trigger.
+                </div>
+            </li>
+            <li>
+              <a class="text-dark nav-link px-3" href="#">
+                <span class="me-2">
+                  <i class="fas fa-cog"></i>
+                </span>
+                <span>লোডিং</span>
+              </a>
+            </li>
+
+            <li>
+              <a class="text-dark nav-link px-3" href="#">
+                <span class="me-2">
+                  <i class="fas fa-cog"></i>
+                </span>
+                <span>আন-লোডিং</span>
+              </a>
+            </li>
+            
+            <li>
+              <a class="text-dark nav-link px-3" href="#">
+                <span class="me-2">
+                  <i class="fas fa-cog"></i>
+                </span>
+                <span>বিক্রয়</span>
+              </a>
+            </li>
+
+            <li>
+              <a class="text-dark nav-link px-3 d-flex justify-content-between" data-bs-toggle="collapse" href="#collapse-2" role="button">
+                <span>
+                  <i class="fas fa-users me-2"></i>                  
+                  কাস্টমার</span>
+                <span>
+                  <i class="fas fa-plus"></i>
+                </span>
+              </a>
+              <div class="collapse" id="collapse-2">
+                <div class="card card-body" style="transform: none;">
+                  Some placeholder content for the collapse component. This panel is hidden by default but revealed when the user activates the relevant trigger.
+                </div>
+            </li>
+
+            <li>
+              <a class="text-dark nav-link px-3" href="#">
+                <span class="me-2">
+                  <i class="fas fa-cog"></i>
+                </span>
+                <span>ডেলিভারি</span>
+              </a>
+            </li>
+
+            <li>
+              <a class="text-dark nav-link px-3 d-flex justify-content-between" data-bs-toggle="collapse" href="#collapse-2" role="button">
+                <span>
+                  <i class="fas fa-users me-2"></i>                  
+                  অ্যাকাউন্টস</span>
+                <span>
+                  <i class="fas fa-plus"></i>
+                </span>
+              </a>
+              <div class="collapse" id="collapse-2">
+                <div class="card card-body" style="transform: none;">
+                  Some placeholder content for the collapse component. This panel is hidden by default but revealed when the user activates the relevant trigger.
+                </div>
+            </li>
+
+            <li>
+              <a class="text-dark nav-link px-3 d-flex justify-content-between" data-bs-toggle="collapse" href="#collapse-2" role="button">
+                <span>
+                  <i class="fas fa-users me-2"></i>                  
+                  রিপোর্ট</span>
+                <span>
+                  <i class="fas fa-plus"></i>
+                </span>
+              </a>
+              <div class="collapse" id="collapse-2">
+                <div class="card card-body" style="transform: none;">
+                  Some placeholder content for the collapse component. This panel is hidden by default but revealed when the user activates the relevant trigger.
+                </div>
+            </li>
+            <li>
+              <a class="text-dark nav-link px-3" href="#">
+                <span class="me-2">
+                  <i class="fas fa-cog"></i>
+                </span>
+                <span>সেটিংস</span>
+              </a>
             </li>
           </ul>
         </nav>
@@ -105,7 +206,7 @@
      <div class="container-fluid">
        <div class="row mt-5">
          <div class="col-md-3 mb-3">
-          <div class="card shadow text-dark bg-warning mb-3 h-100">
+          <div class="card shadow text-dark mb-3 h-100">
             <div class="card-body">
               <h5 class="card-title dashboard-card text-center">
                 <img src="./assets/icons/coal-svgrepo-com.svg" alt="">
@@ -115,106 +216,106 @@
           </div>
          </div>
          <div class="col-md-3 mb-3">
-          <div class="card shadow text-dark bg-warning mb-3 h-100">
+          <div class="card shadow text-dark mb-3 h-100">
             <div class="card-body">
               <h5 class="card-title dashboard-card text-center">
-                <img src="./assets/icons/coal-svgrepo-com.svg" alt="">
+                <img src="./assets/icons/cart-svgrepo-com.svg" alt="">
               </h5>
-              <p class="card-text dashboard-card text-center">কয়লা</p>
+              <p class="card-text dashboard-card text-center">মাটি ক্যারিং</p>
             </div>
           </div>
          </div>
          <div class="col-md-3 mb-3">
-          <div class="card shadow text-dark bg-warning mb-3 h-100">
+          <div class="card shadow text-dark  mb-3 h-100">
             <div class="card-body">
               <h5 class="card-title dashboard-card text-center">
-                <img src="./assets/icons/coal-svgrepo-com.svg" alt="">
+                <img src="./assets/icons/brick-svgrepo-com.svg" alt="">
               </h5>
-              <p class="card-text dashboard-card text-center">কয়লা</p>
+              <p class="card-text dashboard-card text-center">পাকা ইট</p>
             </div>
           </div>
          </div>
          <div class="col-md-3 mb-3">
-          <div class="card shadow text-dark bg-warning mb-3 h-100">
+          <div class="card shadow text-dark mb-3 h-100">
             <div class="card-body">
               <h5 class="card-title dashboard-card text-center">
-                <img src="./assets/icons/coal-svgrepo-com.svg" alt="">
+                <img src="./assets/icons/brick-raw-svgrepo-com .svg" alt="">
               </h5>
-              <p class="card-text dashboard-card text-center">কয়লা</p>
-            </div>
-          </div>
-         </div>
-       </div>
-       <div class="row mt-2">
-         <div class="col-md-3 mb-3">
-          <div class="card shadow text-dark bg-warning mb-3 h-100">
-            <div class="card-body">
-              <h5 class="card-title dashboard-card text-center">
-                <img src="./assets/icons/coal-svgrepo-com.svg" alt="">
-              </h5>
-              <p class="card-text dashboard-card text-center">কয়লা</p>
-            </div>
-          </div>
-         </div>
-         <div class="col-md-3 mb-3">
-          <div class="card shadow text-dark bg-warning mb-3 h-100">
-            <div class="card-body">
-              <h5 class="card-title dashboard-card text-center">
-                <img src="./assets/icons/coal-svgrepo-com.svg" alt="">
-              </h5>
-              <p class="card-text dashboard-card text-center">কয়লা</p>
-            </div>
-          </div>
-         </div>
-         <div class="col-md-3 mb-3">
-          <div class="card shadow text-dark bg-warning mb-3 h-100">
-            <div class="card-body">
-              <h5 class="card-title dashboard-card text-center">
-                <img src="./assets/icons/coal-svgrepo-com.svg" alt="">
-              </h5>
-              <p class="card-text dashboard-card text-center">কয়লা</p>
-            </div>
-          </div>
-         </div>
-         <div class="col-md-3 mb-3">
-          <div class="card shadow text-dark bg-warning mb-3 h-100">
-            <div class="card-body">
-              <h5 class="card-title dashboard-card text-center">
-                <img src="./assets/icons/coal-svgrepo-com.svg" alt="">
-              </h5>
-              <p class="card-text dashboard-card text-center">কয়লা</p>
+              <p class="card-text dashboard-card text-center">কাঁচা ইট</p>
             </div>
           </div>
          </div>
        </div>
        <div class="row mt-2">
          <div class="col-md-3 mb-3">
-          <div class="card shadow text-dark bg-warning mb-3 h-100">
+          <div class="card shadow text-dark mb-3 h-100">
             <div class="card-body">
               <h5 class="card-title dashboard-card text-center">
                 <img src="./assets/icons/coal-svgrepo-com.svg" alt="">
               </h5>
-              <p class="card-text dashboard-card text-center">কয়লা</p>
+              <p class="card-text dashboard-card text-center">আন-লোডিং</p>
             </div>
           </div>
          </div>
          <div class="col-md-3 mb-3">
-          <div class="card shadow text-dark bg-warning mb-3 h-100">
+          <div class="card shadow text-dark mb-3 h-100">
             <div class="card-body">
               <h5 class="card-title dashboard-card text-center">
                 <img src="./assets/icons/coal-svgrepo-com.svg" alt="">
               </h5>
-              <p class="card-text dashboard-card text-center">কয়লা</p>
+              <p class="card-text dashboard-card text-center">দৈনিক আয়</p>
             </div>
           </div>
          </div>
          <div class="col-md-3 mb-3">
-          <div class="card shadow text-dark bg-warning mb-3 h-100">
+          <div class="card shadow text-dark mb-3 h-100">
             <div class="card-body">
               <h5 class="card-title dashboard-card text-center">
                 <img src="./assets/icons/coal-svgrepo-com.svg" alt="">
               </h5>
-              <p class="card-text dashboard-card text-center">কয়লা</p>
+              <p class="card-text dashboard-card text-center">দৈনিক ব্যয়</p>
+            </div>
+          </div>
+         </div>
+         <div class="col-md-3 mb-3">
+          <div class="card shadow text-dark mb-3 h-100">
+            <div class="card-body">
+              <h5 class="card-title dashboard-card text-center">
+                <img src="./assets/icons/coal-svgrepo-com.svg" alt="">
+              </h5>
+              <p class="card-text dashboard-card text-center">বিক্রয়</p>
+            </div>
+          </div>
+         </div>
+       </div>
+       <div class="row mt-2">
+         <div class="col-md-3 mb-3">
+          <div class="card shadow text-dark mb-3 h-100">
+            <div class="card-body">
+              <h5 class="card-title dashboard-card text-center">
+                <img src="./assets/icons/coal-svgrepo-com.svg" alt="">
+              </h5>
+              <p class="card-text dashboard-card text-center">ডেলিভারি</p>
+            </div>
+          </div>
+         </div>
+         <div class="col-md-3 mb-3">
+          <div class="card shadow text-dark mb-3 h-100">
+            <div class="card-body">
+              <h5 class="card-title dashboard-card text-center">
+                <img src="./assets/icons/coal-svgrepo-com.svg" alt="">
+              </h5>
+              <p class="card-text dashboard-card text-center">মিল-পার্টি</p>
+            </div>
+          </div>
+         </div>
+         <div class="col-md-3 mb-3">
+          <div class="card shadow text-dark mb-3 h-100">
+            <div class="card-body">
+              <h5 class="card-title dashboard-card text-center">
+                <img src="./assets/icons/coal-svgrepo-com.svg" alt="">
+              </h5>
+              <p class="card-text dashboard-card text-center">জমি</p>
             </div>
           </div>
          </div>
