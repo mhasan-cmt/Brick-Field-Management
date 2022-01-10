@@ -4,21 +4,21 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AmarBrick | Home</title>
+    <title>Brick Manage | Home</title>
 
     <!-- Fav Icon  -->
     <link rel="icon" href="https://www.amarbrick.com/public/web/assets/images/icon.png" type="image/x-icon">
 
     <!-- External CSS Linkup -->
-    <link rel="stylesheet" href="./assets/css/styles.css">
+    <link rel="stylesheet" href="../../assets/css/styles.css">
 
     <!-- Bootstrap -->
-    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../../node_modules/bootstrap/dist/css/bootstrap.min.css">
 
     <!-- Font Awesome -->
-    <script defer src="./node_modules/@fortawesome/fontawesome-free/js/brands.min.js"></script>
-    <script defer src="./node_modules/@fortawesome/fontawesome-free/js/solid.min.js"></script>
-    <script defer src="./node_modules/@fortawesome/fontawesome-free/js/fontawesome.min.js"></script>
+    <script defer src="../../../node_modules/@fortawesome/fontawesome-free/js/brands.min.js"></script>
+    <script defer src="../../../node_modules/@fortawesome/fontawesome-free/js/solid.min.js"></script>
+    <script defer src="../../../node_modules/@fortawesome/fontawesome-free/js/fontawesome.min.js"></script>
 </head>
 <body>
 
@@ -35,8 +35,8 @@
             <!-- Offcanvas trigger ends -->
 
 
-          <a class="navbar-brand me-auto" href="#">
-            <img src="https://www.amarbrick.com/public/web/assets/images/logo.png" alt="">
+          <a class="navbar-brand me-auto" href="#" onclick="redirectTo('.././index.php')">
+            <h2 class="text-dark">Brick Manage</h2>
           </a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -54,10 +54,10 @@
                 <button type="button" class="btn text-light dropdown-toggle" data-bs-toggle="dropdown" data-bs-display="static" aria-expanded="false">
                   <i class="fas fa-user"></i>
                 </button>
-                <ul class="dropdown-menu dropdown-menu-lg-end">
-                  <li><button class="dropdown-item" type="button">Action</button></li>
-                  <li><button class="dropdown-item" type="button">Another action</button></li>
-                  <li><button class="dropdown-item" type="button">Something else here</button></li>
+                <ul class="dropdown-menu dropdown-menu-lg-end p-3">
+                  <li><button class="dropdown-item" type="button">Mahmudul Hasan Shafin</button></li>
+                  <li><button class="dropdown-item" type="button">Admin</button></li>
+                  <li><button class="dropdown-item" type="button" onclick="redirectTo('./login.php')"><i class="fas fa-sign-out-alt"></i> Logout</button></li>
                 </ul>
               </div>
             </div>
@@ -136,7 +136,7 @@
             </li>
 
             <li>
-              <a class="text-dark nav-link px-3 d-flex justify-content-between" data-bs-toggle="collapse" href="#collapse-2" role="button">
+              <a class="text-dark nav-link px-3 d-flex justify-content-between" data-bs-toggle="collapse" href="#customer" role="button">
                 <span>
                   <i class="fas fa-users me-2"></i>                  
                   কাস্টমার</span>
@@ -144,7 +144,7 @@
                   <i class="fas fa-plus"></i>
                 </span>
               </a>
-              <div class="collapse" id="collapse-2">
+              <div class="collapse" id="customer">
                 <div class="card card-body" style="transform: none;">
                   Some placeholder content for the collapse component. This panel is hidden by default but revealed when the user activates the relevant trigger.
                 </div>
@@ -153,14 +153,14 @@
             <li>
               <a class="text-dark nav-link px-3" href="#">
                 <span class="me-2">
-                  <i class="fas fa-cog"></i>
+                  <img width="35px" height="auto" src="../../assets/icons/truck.svg" alt="">
                 </span>
                 <span>ডেলিভারি</span>
               </a>
             </li>
 
             <li>
-              <a class="text-dark nav-link px-3 d-flex justify-content-between" data-bs-toggle="collapse" href="#collapse-2" role="button">
+              <a class="text-dark nav-link px-3 d-flex justify-content-between" data-bs-toggle="collapse" href="#accounts" role="button">
                 <span>
                   <i class="fas fa-users me-2"></i>                  
                   অ্যাকাউন্টস</span>
@@ -168,14 +168,14 @@
                   <i class="fas fa-plus"></i>
                 </span>
               </a>
-              <div class="collapse" id="collapse-2">
+              <div class="collapse" id="accounts">
                 <div class="card card-body" style="transform: none;">
                   Some placeholder content for the collapse component. This panel is hidden by default but revealed when the user activates the relevant trigger.
                 </div>
             </li>
 
             <li>
-              <a class="text-dark nav-link px-3 d-flex justify-content-between" data-bs-toggle="collapse" href="#collapse-2" role="button">
+              <a class="text-dark nav-link px-3 d-flex justify-content-between" data-bs-toggle="collapse" href="#report" role="button">
                 <span>
                   <i class="fas fa-users me-2"></i>                  
                   রিপোর্ট</span>
@@ -183,7 +183,7 @@
                   <i class="fas fa-plus"></i>
                 </span>
               </a>
-              <div class="collapse" id="collapse-2">
+              <div class="collapse" id="report">
                 <div class="card card-body" style="transform: none;">
                   Some placeholder content for the collapse component. This panel is hidden by default but revealed when the user activates the relevant trigger.
                 </div>
@@ -205,117 +205,91 @@
     <main class="mt-5 pt-3">
      <div class="container-fluid">
        <div class="row mt-5">
-         <div class="col-md-3 mb-3">
-          <div class="card shadow text-dark mb-3 h-100">
-            <div class="card-body">
-              <h5 class="card-title dashboard-card text-center">
-                <img src="./assets/icons/coal-svgrepo-com.svg" alt="">
-              </h5>
-              <p class="card-text dashboard-card text-center">কয়লা</p>
-            </div>
-          </div>
-         </div>
-         <div class="col-md-3 mb-3">
-          <div class="card shadow text-dark mb-3 h-100">
-            <div class="card-body">
-              <h5 class="card-title dashboard-card text-center">
-                <img src="./assets/icons/cart-svgrepo-com.svg" alt="">
-              </h5>
-              <p class="card-text dashboard-card text-center">মাটি ক্যারিং</p>
-            </div>
-          </div>
-         </div>
-         <div class="col-md-3 mb-3">
-          <div class="card shadow text-dark  mb-3 h-100">
-            <div class="card-body">
-              <h5 class="card-title dashboard-card text-center">
-                <img src="./assets/icons/brick-svgrepo-com.svg" alt="">
-              </h5>
-              <p class="card-text dashboard-card text-center">পাকা ইট</p>
-            </div>
-          </div>
-         </div>
-         <div class="col-md-3 mb-3">
-          <div class="card shadow text-dark mb-3 h-100">
-            <div class="card-body">
-              <h5 class="card-title dashboard-card text-center">
-                <img src="./assets/icons/brick-raw-svgrepo-com .svg" alt="">
-              </h5>
-              <p class="card-text dashboard-card text-center">কাঁচা ইট</p>
-            </div>
-          </div>
-         </div>
-       </div>
-       <div class="row mt-2">
-         <div class="col-md-3 mb-3">
-          <div class="card shadow text-dark mb-3 h-100">
-            <div class="card-body">
-              <h5 class="card-title dashboard-card text-center">
-                <img src="./assets/icons/coal-svgrepo-com.svg" alt="">
-              </h5>
-              <p class="card-text dashboard-card text-center">আন-লোডিং</p>
-            </div>
-          </div>
-         </div>
-         <div class="col-md-3 mb-3">
-          <div class="card shadow text-dark mb-3 h-100">
-            <div class="card-body">
-              <h5 class="card-title dashboard-card text-center">
-                <img src="./assets/icons/coal-svgrepo-com.svg" alt="">
-              </h5>
-              <p class="card-text dashboard-card text-center">দৈনিক আয়</p>
-            </div>
-          </div>
-         </div>
-         <div class="col-md-3 mb-3">
-          <div class="card shadow text-dark mb-3 h-100">
-            <div class="card-body">
-              <h5 class="card-title dashboard-card text-center">
-                <img src="./assets/icons/coal-svgrepo-com.svg" alt="">
-              </h5>
-              <p class="card-text dashboard-card text-center">দৈনিক ব্যয়</p>
-            </div>
-          </div>
-         </div>
-         <div class="col-md-3 mb-3">
-          <div class="card shadow text-dark mb-3 h-100">
-            <div class="card-body">
-              <h5 class="card-title dashboard-card text-center">
-                <img src="./assets/icons/coal-svgrepo-com.svg" alt="">
-              </h5>
-              <p class="card-text dashboard-card text-center">বিক্রয়</p>
-            </div>
-          </div>
-         </div>
-       </div>
-       <div class="row mt-2">
-         <div class="col-md-3 mb-3">
-          <div class="card shadow text-dark mb-3 h-100">
-            <div class="card-body">
-              <h5 class="card-title dashboard-card text-center">
-                <img src="./assets/icons/coal-svgrepo-com.svg" alt="">
-              </h5>
-              <p class="card-text dashboard-card text-center">ডেলিভারি</p>
-            </div>
-          </div>
-         </div>
-         <div class="col-md-3 mb-3">
-          <div class="card shadow text-dark mb-3 h-100">
-            <div class="card-body">
-              <h5 class="card-title dashboard-card text-center">
-                <img src="./assets/icons/coal-svgrepo-com.svg" alt="">
-              </h5>
-              <p class="card-text dashboard-card text-center">মিল-পার্টি</p>
-            </div>
-          </div>
-         </div>
-         <div class="col-md-3 mb-3">
-          <div class="card shadow text-dark mb-3 h-100">
-            <div class="card-body">
-              <h5 class="card-title dashboard-card text-center">
-                <img src="./assets/icons/coal-svgrepo-com.svg" alt="">
-              </h5>
-              <p class="card-text dashboard-card text-center">জমি</p>
+         <div class="col-md-12">
+          <div class="card" style="transform: none;">
+            <h5 class="card-header" style="background-color: #EB945F;" ><strong>কয়লা</strong></h5>
+            <div class="card-body" style="padding: 0;">
+
+              <ul class="nav nav-tabs" id="myTab" role="tablist">
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link my-tab-btn" id="coal-supplier-tab" data-bs-toggle="tab" data-bs-target="#coal-supplier" type="button" role="tab">বিক্রেতা</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link my-tab-btn active" id="coal-tab" data-bs-toggle="tab" data-bs-target="#coal" type="button" role="tab" >কয়লা</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link my-tab-btn" id="coal-report-tab" data-bs-toggle="tab" data-bs-target="#coal-report" type="button" role="tab">রিপোর্ট</button>
+                </li>
+              </ul>
+              <div class="tab-content" id="myTabContent">
+                <div class="tab-pane fade p-4" id="coal-supplier" role="tabpanel">
+                  
+                </div>
+                <div class="p-3 tab-pane fade show active" id="coal" role="tabpanel">
+                  <div class="row align-middle justify-content-between">
+                    <div class="col-md-6 text-center d-flex align-items-center justify-content-center">
+                      <img class="img-fluid mb-1" width="400px" height="auto" src="../../assets/images/factory.svg" alt="">
+                    </div>
+                    <div class="col-md-6">
+                      <form action="#">
+                        <div class="input-group mb-3">
+                          <span class="input-group-text" id="basic-addon1">নাম</span>
+                          <input type="text" class="form-control">
+                        </div>
+                        <div class="input-group mb-3">
+                          <span class="input-group-text" id="basic-addon1">পরিমাণ (টন)</span>
+                          <input type="number" class="form-control">
+                        </div>
+                        <div class="input-group mb-3">
+                          <span class="input-group-text" id="basic-addon1">হার</span>
+                          <input type="number" class="form-control">
+                        </div>
+                        <div class="input-group mb-3">
+                          <span class="input-group-text" id="basic-addon1">টোটাল</span>
+                          <input type="number" class="form-control">
+                        </div>
+                        <div class="input-group mb-3">
+                          <span class="input-group-text" id="basic-addon1">প্রদান</span>
+                          <input type="number" class="form-control">
+                        </div>
+                        <div class="input-group mb-3">
+                          <span class="input-group-text" id="basic-addon1">বাকি</span>
+                          <input type="number" class="form-control">
+                        </div>
+                        <button class="btn btn-success">সাবমিট</button>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+                <div class="tab-pane fade p-4" id="coal-report" role="tabpanel">
+                  <table class="table">
+                    <thead>
+                      <tr>
+                        <th scope="col">Sl no.</th>
+                        <th scope="col">বিক্রেতা</th>
+                        <th scope="col">টোটাল</th>
+                        <th scope="col">প্রদান করা হয়েছে</th>
+                        <th scope="col">বাকি</th>
+                        <th scope="col">Action</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row">1</th>
+                        <td>Mark</td>
+                        <td>Otto</td>
+                        <td>@mdo</td>
+                        <td>2000</td>
+                        <td>
+                          <button class="btn btn-info"> <i class="text-light fas fa-money-bill"></i> </button>
+                          <button class="btn btn-warning"><i class="fas fa-edit"></i></button>
+                          <button class="btn btn-danger"><i class="fas fa-trash-alt"></i></button>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
             </div>
           </div>
          </div>
@@ -326,8 +300,8 @@
     
 
     <!-- Bootstrap js  -->
-    <script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="../../../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
     <!-- External Js Linkup -->
-    <script src="./assets/js/app.js"></script>
+    <script src="../../assets/js/app.js"></script>
 </body>
 </html>

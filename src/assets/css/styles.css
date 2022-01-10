@@ -95,6 +95,12 @@ body {
   height: auto;
 }
 
+.nav-link.my-tab-btn {
+  font-size: 1.1rem;
+  color: rgba(0, 0, 0, 0.76);
+  font-weight: 600;
+}
+
 .scrollbar {
   overflow-y: scroll;
 }
@@ -115,6 +121,16 @@ body {
   background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0.44, #7a99d9), color-stop(0.72, #497dbd), color-stop(0.86, #1c3a94));
 }
 
+.container-fluid.dashboard .row .col-md-3 {
+  cursor: pointer;
+}
+
+#exTab2 h3 {
+  color: white;
+  background-color: #428bca;
+  padding: 5px 15px;
+}
+
 @media (min-width: 992px) {
   body {
     overflow: auto !important;
@@ -129,8 +145,8 @@ body {
     -webkit-transform: none;
             transform: none;
     visibility: visible !important;
-    top: 90px;
-    height: calc(100% - 90px);
+    top: 72px;
+    height: calc(100% - 72px);
   }
   #offcanvas-trigger {
     display: none;

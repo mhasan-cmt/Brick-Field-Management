@@ -1,0 +1,26 @@
+// imports
+@import 'partials/_reset';
+@import 'partials/colors';
+@import 'partials/fonts';
+@import 'partials/variables';
+
+body{
+    font: {
+        family:'Mukti', Arial, sans-serif !important;
+    }
+    main{
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .btn.btn-login{
+        background-color: $lightBg;
+        color: $light;
+    }
+    .bg-m-light{
+        background-color: $lightBg;
+        color: white;
+    }
+}
