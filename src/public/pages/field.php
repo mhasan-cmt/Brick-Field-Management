@@ -1,207 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Brick Manage | Home</title>
-
-    <!-- Fav Icon  -->
-    <link rel="icon" href="https://www.amarbrick.com/public/web/assets/images/icon.png" type="image/x-icon">
-
-    <!-- External CSS Linkup -->
-    <link rel="stylesheet" href="../../assets/css/styles.css">
-
-    <!-- Bootstrap -->
-    <link rel="stylesheet" href="../../../node_modules/bootstrap/dist/css/bootstrap.min.css">
-
-    <!-- Font Awesome -->
-    <script defer src="../../../node_modules/@fortawesome/fontawesome-free/js/brands.min.js"></script>
-    <script defer src="../../../node_modules/@fortawesome/fontawesome-free/js/solid.min.js"></script>
-    <script defer src="../../../node_modules/@fortawesome/fontawesome-free/js/fontawesome.min.js"></script>
-</head>
-<body>
-
-    <!-- NavBar  -->
-
-    <nav class="navbar navbar-expand-lg navbar-dark bg-my fixed-top">
-          <div class="container-fluid">
-
-
-            <!-- Offcanvas trigger -->
-            <a id="offcanvas-trigger" class="me-2 btn btn-outline-light" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">
-              <i class="fas fa-bars"></i>
-            </a>
-            <!-- Offcanvas trigger ends -->
-
-
-          <a class="navbar-brand me-auto" href="#" onclick="redirectTo('.././index.php')">
-            <h2 class="text-dark">Brick Manage</h2>
-          </a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-              <form class="d-flex ms-auto">
-                <div class="input-group">
-                    <input type="text" class="form-control" placeholder="খুঁজুন" aria-label="Recipient's username" aria-describedby="button-addon2">
-                    <button class="btn btn-primary" type="button" id="button-addon2">
-                      <i class="fas fa-search"></i> 
-                    </button>
-                  </div>
-              </form>
-              <div class="btn-group">
-                <button type="button" class="btn text-light dropdown-toggle" data-bs-toggle="dropdown" data-bs-display="static" aria-expanded="false">
-                  <i class="fas fa-user"></i>
-                </button>
-                <ul class="dropdown-menu dropdown-menu-lg-end p-3">
-                  <li><button class="dropdown-item" type="button">Mahmudul Hasan Shafin</button></li>
-                  <li><button class="dropdown-item" type="button">Admin</button></li>
-                  <li><button class="dropdown-item" type="button" onclick="redirectTo('./login.php')"><i class="fas fa-sign-out-alt"></i> Logout</button></li>
-                </ul>
-              </div>
-            </div>
-          </div>
-    </nav>
-    <!-- NavBar Ends  -->
-
-
-    <!-- OffCanvas  -->
+<?php
+include('page_header.php');
+?>
     
-    <div class="offcanvas offcanvas-start sidebar-nav" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
-      <div class="offcanvas-body p-0 scrollbar style-7">
-        <nav class="navbar side-bar-nav force-overflow">
-          <ul class="navbar-nav">
-            <li>
-              <a class="text-dark nav-link px-3 active" href="#">
-                <span class="me-2">
-                  <i class="fas fa-home"></i>
-                </span>
-                <span>ড্যাশবোর্ড</span>
-              </a>
-            </li>
-            <li>
-              <a class="text-dark nav-link px-3 d-flex justify-content-between" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
-                <span>
-                  <i class="fab fa-forumbee me-2"></i>
-                  কাঁচামাল ক্রয়</span>
-                <span class="ms-5">
-                  <i class="fas fa-plus"></i>
-                </span>
-              </a>
-              <div class="collapse" id="collapseExample">
-                <div class="card card-body" style="transform: none;">
-                  Some placeholder content for the collapse component. This panel is hidden by default but revealed when the user activates the relevant trigger.
-                </div>
-            </li>
-            <li>
-              <a class="text-dark nav-link px-3 d-flex justify-content-between" data-bs-toggle="collapse" href="#collapse-2" role="button">
-                <span>
-                  <i class="fas fa-users me-2"></i>                  
-                  শ্রমিক</span>
-                <span>
-                  <i class="fas fa-plus"></i>
-                </span>
-              </a>
-              <div class="collapse" id="collapse-2">
-                <div class="card card-body" style="transform: none;">
-                  Some placeholder content for the collapse component. This panel is hidden by default but revealed when the user activates the relevant trigger.
-                </div>
-            </li>
-            <li>
-              <a class="text-dark nav-link px-3" href="#">
-                <span class="me-2">
-                  <i class="fas fa-cog"></i>
-                </span>
-                <span>লোডিং</span>
-              </a>
-            </li>
-
-            <li>
-              <a class="text-dark nav-link px-3" href="#">
-                <span class="me-2">
-                  <i class="fas fa-cog"></i>
-                </span>
-                <span>আন-লোডিং</span>
-              </a>
-            </li>
-            
-            <li>
-              <a class="text-dark nav-link px-3" href="#">
-                <span class="me-2">
-                  <i class="fas fa-cog"></i>
-                </span>
-                <span>বিক্রয়</span>
-              </a>
-            </li>
-
-            <li>
-              <a class="text-dark nav-link px-3 d-flex justify-content-between" data-bs-toggle="collapse" href="#customer" role="button">
-                <span>
-                  <i class="fas fa-users me-2"></i>                  
-                  কাস্টমার</span>
-                <span>
-                  <i class="fas fa-plus"></i>
-                </span>
-              </a>
-              <div class="collapse" id="customer">
-                <div class="card card-body" style="transform: none;">
-                  Some placeholder content for the collapse component. This panel is hidden by default but revealed when the user activates the relevant trigger.
-                </div>
-            </li>
-
-            <li>
-              <a class="text-dark nav-link px-3" href="#">
-                <span class="me-2">
-                  <img width="35px" height="auto" src="../../assets/icons/truck.svg" alt="">
-                </span>
-                <span>ডেলিভারি</span>
-              </a>
-            </li>
-
-            <li>
-              <a class="text-dark nav-link px-3 d-flex justify-content-between" data-bs-toggle="collapse" href="#accounts" role="button">
-                <span>
-                  <i class="fas fa-users me-2"></i>                  
-                  অ্যাকাউন্টস</span>
-                <span>
-                  <i class="fas fa-plus"></i>
-                </span>
-              </a>
-              <div class="collapse" id="accounts">
-                <div class="card card-body" style="transform: none;">
-                  Some placeholder content for the collapse component. This panel is hidden by default but revealed when the user activates the relevant trigger.
-                </div>
-            </li>
-
-            <li>
-              <a class="text-dark nav-link px-3 d-flex justify-content-between" data-bs-toggle="collapse" href="#report" role="button">
-                <span>
-                  <i class="fas fa-users me-2"></i>                  
-                  রিপোর্ট</span>
-                <span>
-                  <i class="fas fa-plus"></i>
-                </span>
-              </a>
-              <div class="collapse" id="report">
-                <div class="card card-body" style="transform: none;">
-                  Some placeholder content for the collapse component. This panel is hidden by default but revealed when the user activates the relevant trigger.
-                </div>
-            </li>
-            <li>
-              <a class="text-dark nav-link px-3" href="#">
-                <span class="me-2">
-                  <i class="fas fa-cog"></i>
-                </span>
-                <span>সেটিংস</span>
-              </a>
-            </li>
-          </ul>
-        </nav>
-      </div>
-    </div>
-    <!-- OffCanvas Ends -->
-
     <main class="mt-5 pt-3">
      <div class="container-fluid">
        <div class="row mt-5">
@@ -209,6 +9,21 @@
           <div class="card" style="transform: none;">
             <h5 class="card-header" style="background-color: #EB945F;" ><strong>জমি</strong></h5>
             <div class="card-body" style="padding: 0;">
+
+          <?php
+          if(isset($_GET['msg'])){
+            ?>
+            <div class="alert mt-2 alert-warning alert-dismissible fade show" role="alert">
+            <strong>
+              <?php
+              echo $_GET['msg'];
+              ?>
+            </strong>
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>            
+            <?php
+          }
+          ?>
 
               <ul class="nav nav-tabs" id="myTab" role="tablist">
                 <li class="nav-item" role="presentation">
@@ -224,6 +39,92 @@
               <div class="tab-content" id="myTabContent">
                 <div class="tab-pane fade p-4" id="field-owner" role="tabpanel">
                   
+                <!-- Button trigger modal -->
+                  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                  <span><i class="fas fa-plus"></i></span> যোগ করুন
+                  </button>
+
+        <!-- Modal -->
+        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="staticBackdropLabel">জমির মালিক</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <form action="../../server/database/field_handle.php" method="post">
+                <div class="modal-body">
+                  <div class="input-group mb-3">
+                    <span class="input-group-text" id="basic-addon1">নাম</span>
+                    <input type="text" name="owner_name" class="form-control" aria-label="Username" aria-describedby="basic-addon1">
+                  </div>
+                  <div class="input-group mb-3">
+                    <span class="input-group-text" id="basic-addon1">মোবাইল</span>
+                    <input type="number" name="owner_mobile" class="form-control" aria-label="Username" aria-describedby="basic-addon1">
+                  </div>
+                  <div class="input-group mb-3">
+                    <span class="input-group-text" id="basic-addon1">ঠিকানা</span>
+                    <input type="text" name="owner_address" class="form-control" aria-label="Username" aria-describedby="basic-addon1">
+                  </div>
+                </div>
+             
+              <div class="modal-footer">
+                <button type="button" class="btn btn-warning" data-bs-dismiss="modal">বাতিল</button>
+                <button type="submit" name="owner_add" data-bs-dismiss="modal" class="btn btn-success">সাবমিট</button>
+              </div>
+            </form>
+            </div>
+          </div>
+        </div>
+        <!-- Modal  -->
+
+        <table class="table">
+                    <thead>
+                      <tr>
+                        <th scope="col">Sl no.</th>
+                        <th scope="col">মালিক</th>
+                        <th scope="col">মোবাইল</th>
+                        <th scope="col">ঠিকানা</th>
+                        <th scope="col">Action</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <?php
+                        require_once('../../server/connection.php');
+                        $query = "SELECT * from `field_owners`";
+
+                        $result = $conn->query($query);
+
+                        if($result->num_rows>0){
+                          while($row = $result->fetch_assoc()){
+                            ?>
+                      <tr>                        
+                        <th scope="row"><?php
+                        echo $row['id'];
+                        ?></th>
+                        <td><?php
+                        echo $row['owner_name'];
+                        ?></td>
+                        <td>
+                        <?php
+                        echo $row['owner_mobile'];
+                        ?>
+                        </td>
+                        <td><?php
+                        echo $row['owner_address'];
+                        ?></td>
+                        <td class="d-flex">
+                          <button class="btn btn-warning me-1"><i class="fas fa-edit"></i></button>
+                          <button class="btn btn-danger"><i class="fas fa-trash-alt"></i></button>
+                        </td>
+                      </tr>
+                            <?php
+                          }
+                        }
+                      ?>
+                      
+                    </tbody>
+                  </table>
                 </div>
                 <div class="p-3 tab-pane fade show active" id="field" role="tabpanel">
                   <div class="row align-middle justify-content-between">
@@ -234,31 +135,51 @@
                       <form action="../../server/database/field_handle.php" method='post'>
                         <div class="input-group mb-3">
                           <span class="input-group-text" id="basic-addon1">নাম</span>
-                          <input name="field_owner" type="text" class="form-control">
+                          <select class="form-select" name="field_owner" aria-label="Default select example">
+                            <option selected disabled>মালিকের নাম</option>
+                           <?php
+                           require_once('../../server/connection.php');
+                           $query = "SELECT * from `field_owners`";
+
+                           $result = $conn->query($query);
+
+                           if($result->num_rows>0){
+                             while($row = $result->fetch_assoc()){
+                           ?><option>
+                             <?php
+                             echo $row['owner_name'];
+                             ?>
+                           </option>
+                           <?php
+                             }
+                            }
+                           
+                           ?>
+                          </select>
                         </div>
                         <div class="input-group mb-3">
                           <span class="input-group-text" id="basic-addon1">তারিখ</span>
-                          <input name="date" type="date" class="form-control">
+                          <input name="date"  type="date" class="form-control">
                         </div>
                         <div class="input-group mb-3">
                           <span class="input-group-text" id="basic-addon1">পরিমাণ (শতকরা)</span>
-                          <input type="number" name="quantity" class="form-control">
+                          <input type="number"  id="quantity" name="quantity" class="form-control">
                         </div>
                         <div class="input-group mb-3">
                           <span class="input-group-text" id="basic-addon1">হার</span>
-                          <input type="number" name="rate" class="form-control">
+                          <input type="number"  id="rate" name="rate" oninput="calculateTotalByRate()" class="form-control">
                         </div>
                         <div class="input-group mb-3">
                           <span class="input-group-text" id="basic-addon1">টোটাল</span>
-                          <input type="number" name="total" class="form-control">
+                          <input type="number"  id="total" name="total" class="form-control">
                         </div>
                         <div class="input-group mb-3">
                           <span class="input-group-text" id="basic-addon1">প্রদান</span>
-                          <input type="number" name="paid" class="form-control">
+                          <input type="number"  id="paid" name="paid" oninput="calculateDue()" class="form-control">
                         </div>
                         <div class="input-group mb-3">
                           <span class="input-group-text" id="basic-addon1">বাকি</span>
-                          <input type="number" name="due" class="form-control">
+                          <input type="number"  id="due" name="due" class="form-control">
                         </div>
                         <button type="submit" name="field_add" class="btn btn-success">সাবমিট</button>
                       </form>
@@ -278,18 +199,44 @@
                       </tr>
                     </thead>
                     <tbody>
-                      <tr>
-                        <th scope="row">1</th>
-                        <td>Mark</td>
-                        <td>Otto</td>
-                        <td>@mdo</td>
-                        <td>2000</td>
+                      <?php
+                        require_once('../../server/connection.php');
+                        $query = "SELECT * from `field_property`";
+
+                        $result = $conn->query($query);
+
+                        if($result->num_rows>0){
+                          while($row = $result->fetch_assoc()){
+                            ?>
+                      <tr>                        
+                        <th scope="row"><?php
+                        echo $row['id'];
+                        ?></th>
+                        <td><?php
+                        echo $row['field_owner'];
+                        ?></td>
                         <td>
-                          <button class="btn btn-info"> <i class="text-light fas fa-money-bill"></i> </button>
-                          <button class="btn btn-warning"><i class="fas fa-edit"></i></button>
+                        <?php
+                        echo $row['total'];
+                        ?>
+                        </td>
+                        <td><?php
+                        echo $row['paid'];
+                        ?></td>
+                        <td><?php
+                        echo $row['due'];
+                        ?></td>
+                        <td class="d-flex">
+                          <button class="btn btn-info me-1"> <i class="text-light fas fa-money-bill"></i> </button>
+                          <button class="btn btn-warning me-1"><i class="fas fa-edit"></i></button>
                           <button class="btn btn-danger"><i class="fas fa-trash-alt"></i></button>
                         </td>
                       </tr>
+                            <?php
+                          }
+                        }
+                      ?>
+                      
                     </tbody>
                   </table>
                 </div>
@@ -303,9 +250,6 @@
 
     
 
-    <!-- Bootstrap js  -->
-    <script src="../../../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-    <!-- External Js Linkup -->
-    <script src="../../assets/js/app.js"></script>
-</body>
-</html>
+<?php
+include('page_footer.php');
+?>
