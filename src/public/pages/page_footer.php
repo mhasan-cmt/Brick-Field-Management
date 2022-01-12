@@ -18,6 +18,21 @@
         let due = document.getElementById('due');
         due.value = mtotal-paid;
       }
+
+      let deleteData =(id)=>{
+        if(confirm("Are you sure")){
+          window.location.href="../../server/database/field_handle.php?delete="+id;
+        }else{
+          console.log("NO");
+        }
+      }
+      let editData =(id)=>{
+        if(confirm("Are you sure")){
+          window.location.href="../../server/database/field_handle.php?edit="+id;
+        }else{
+         console.log("NO");
+        }
+      }
     </script>
 </body>
 </html>

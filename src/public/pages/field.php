@@ -114,8 +114,8 @@ include('page_header.php');
                         echo $row['owner_address'];
                         ?></td>
                         <td class="d-flex">
-                          <button class="btn btn-warning me-1"><i class="fas fa-edit"></i></button>
-                          <button class="btn btn-danger"><i class="fas fa-trash-alt"></i></button>
+                          <button class="btn btn-warning me-1" onclick="editData(<?php echo $row['id'];?>)"><i class="fas fa-edit"></i></button>
+                          <button class="btn btn-danger" onclick="deleteData(<?php echo $row['id'];?>)"><i class="fas fa-trash-alt"></i></button>
                         </td>
                       </tr>
                             <?php

@@ -1,6 +1,5 @@
 <?php
 
-
 if(isset($_POST['field_add'])){
     // echo strval($single_field->getFieldOwner());
     $formatted_date = date('Y-m-d', strtotime($_POST['date']));
@@ -9,6 +8,14 @@ if(isset($_POST['field_add'])){
 
 if(isset($_POST['owner_add'])){
     addOwner($_POST['owner_name'],$_POST['owner_mobile'], $_POST['owner_address']);
+}
+
+if(isset($_GET['delete']) && $_GET['delete']>0){
+    echo $_GET['delete'];
+}
+
+if(isset($_GET['edit']) && $_GET['edit']>0){
+    echo $_GET['edit'];
 }
 
 
