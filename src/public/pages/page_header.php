@@ -72,7 +72,7 @@
       <div class="offcanvas-body p-0 scrollbar style-7">
         <nav class="navbar side-bar-nav force-overflow">
           <ul class="navbar-nav">
-            <li>
+            <li onclick="redirectTo('../index.php')">
               <a class="text-dark nav-link px-3 active" href="#">
                 <span class="me-2">
                   <i class="fas fa-home"></i>

@@ -4,7 +4,7 @@ include('./components/header.php')
 
     <main class="mt-5 pt-3">
      <div class="container-fluid dashboard">
-       <div class="row mt-5">
+       <div class="row mt-5" uk-scrollspy="target: > div; cls: uk-animation-fade; delay: 200">
          <div class="col-md-3 mb-3" onclick="redirectTo('./pages/coal.php')">
           <div class="card shadow text-dark mb-3 h-100 ">
             <div class="card-body">
@@ -46,7 +46,7 @@ include('./components/header.php')
           </div>
          </div>
        </div>
-       <div class="row mt-2">
+       <div class="row mt-2" uk-scrollspy="target: > div; cls: uk-animation-fade; delay: 300">
          <div class="col-md-3 mb-3">
           <div class="card shadow text-dark mb-3 h-100">
             <div class="card-body">
@@ -88,7 +88,7 @@ include('./components/header.php')
           </div>
          </div>
        </div>
-       <div class="row mt-2">
+       <div class="row mt-2" uk-scrollspy="target: > div; cls: uk-animation-fade; delay: 400">
          <div class="col-md-3 mb-3">
           <div class="card shadow text-dark mb-3 h-100">
             <div class="card-body">

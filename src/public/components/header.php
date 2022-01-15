@@ -14,11 +14,24 @@
     <!-- Bootstrap -->
     <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.min.css">
 
+    <!-- UIkit CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.10.0/dist/css/uikit.min.css" />
+
+<!-- UIkit JS -->
+<script src="https://cdn.jsdelivr.net/npm/uikit@3.10.0/dist/js/uikit.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/uikit@3.10.0/dist/js/uikit-icons.min.js"></script>
     <!-- Font Awesome -->
     <script defer src="../../node_modules/@fortawesome/fontawesome-free/js/brands.min.js"></script>
     <script defer src="../../node_modules/@fortawesome/fontawesome-free/js/solid.min.js"></script>
     <script defer src="../../node_modules/@fortawesome/fontawesome-free/js/fontawesome.min.js"></script>
-</head>
+
+    <style>
+      a:hover{
+        text-decoration:none;
+      }
+    </style>
+
+  </head>
 <body>
     <!-- NavBar  -->
 

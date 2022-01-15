@@ -11,11 +11,27 @@ if(isset($_POST['owner_add'])){
 }
 
 if(isset($_GET['delete']) && $_GET['delete']>0){
-    echo $_GET['delete'];
+    require_once('../../server/connection.php');
+        $query = "SELECT * from `field_owners` WHERE `id`=".$_GET['delete'];
+
+
+        $result = $conn->query($query);
+
+            if($result->num_rows>0){
+                $delete_query = "DELETE FROM `field_owners` WHERE `id`=".$_GET['delete'];
+                if($conn->query($delete_query)==TRUE){
+                    $msg = urlencode("Data Deleted!");
+                    header("location: ../../public/pages/field.php?msg=".$msg);
+                }
+            }
+            else{
+                $msg="Data Deletion Failed!";
+                header("location: ../../public/pages/field.php?msg=".$msg);
+            }
 }
 
-if(isset($_GET['edit']) && $_GET['edit']>0){
-    echo $_GET['edit'];
+if(isset($_POST['edit_owner'])){
+    updateOwnerById($_POST['owner_id'],$_POST['owner_name'],$_POST['owner_mobile'], $_POST['owner_address']);
 }
 
 
@@ -65,6 +81,21 @@ function addOwner($owner_name, $owner_mobile, $owner_address){
     }
 }
 
+function updateOwnerById($id,$owner_name, $owner_mobile, $owner_address){
+    require_once('../connection.php');
+    $update_query = "UPDATE `field_owners` SET `owner_name`='$owner_name',`owner_mobile`='$owner_mobile',`owner_address`='$owner_address' WHERE `id`='$id'";
+
+    if(!owner_dataCheck()){
+        if($conn->query($update_query)){
+            $msg = urlencode("Data updated");
+            
+            header("location: ../../public/pages/field.php?msg=".$msg);
+        }else{
+            
+            header("location: ../../public/pages/field.php?msg=".$msg.$conn->error);
+        }
+    }
+}
 function dataCheck(){
 
     $required = array('field_owner', 'date', 'quantity', 'rate', 'total', 'paid', 'due');

@@ -34,6 +34,7 @@
             <div class="row align-items-center justify-content-between mt-2">
                 <div class="col-md-6 text-center">
                     <img class="img-fluid" width="400px" src="../../assets/images/factory.svg" alt="">
+                
                 </div>
                 <div class="col-md-6">
                     <form method="POST" action="../../server/auth.php">
@@ -51,6 +52,7 @@
             </div>
         </div>
     </main>
+    
     <script src="../../../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
 </body>
 </html>
